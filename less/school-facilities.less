@@ -1,0 +1,99 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.school-facilities {
+	.container();
+	width: auto;
+	height: auto;
+	background: url("/img/bg-3.png") no-repeat;
+	background-size: cover;
+}
+
+.school-facilities__wrapper {
+	display: flex;
+}
+
+.school-facilities__text {
+	font-family: "roboto-regular-webfont", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	flex-basis: 50%;
+	color: @color-white;
+	margin-right: 10px;
+	h3 {
+		font-family: "dosis-bold-webfont", Helvetica, Arial, sans-serif;
+		font-size: 36px;
+	}
+}
+
+.school-facilities__img {
+	background: url("/img/child2.png") no-repeat;
+	width: 416px;
+	height: 363px;
+}
+
+.school-facilities__icons {
+	margin-left: 10px;
+	display: flex;
+	flex-basis: 50%;
+	flex-wrap: wrap;
+}
+
+.school-facilities__icon {
+	box-sizing: border-box;
+	flex-basis: 160px;
+	height: 160px;
+	border-radius: 15px;
+	background-color: @color-white;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	figcaption {
+		font-family: "roboto-medium-webfont", Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		color: @color-blue;
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.school-facilities {
+		width: auto;
+	}
+	.school-facilities__img {
+		display: none;
+	};
+	.school-facilities__wrapper {
+		flex-wrap: wrap;
+	};
+	.school-facilities__text {
+		flex-basis: 100%;
+	};
+	.school-facilities__icons {
+		flex-basis: 100%;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.school-facilities {
+		width: auto;
+	}
+	.school-facilities__img {
+		display: none;
+	};
+	.school-facilities__wrapper {
+		flex-wrap: wrap;
+		flex-direction: column;
+	};
+	.school-facilities__text {
+		flex-basis: 100%;
+	};
+	.school-facilities__icons {
+		flex-basis: 80%;
+		margin: auto;
+	}
+}

@@ -1,0 +1,78 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.slider {
+	-webkit-mask-image: url("/img/slider-mask.png");
+	overflow: hidden; 
+	position: relative;
+	width: 769px;
+	height: 660px;
+	margin: 130px auto 60px 5%;
+	float: left;
+	z-index: 1;
+		&__slides {
+			display: flex;
+			position: relative;
+			transition: 1s; 
+			width: 769px;
+		}
+		&__slide {
+			display: block;
+			width: 769px;
+			height: 660px;
+			& img {
+			width: auto;
+			height: auto;
+			}
+		}
+		&__navigation {
+			position: absolute;
+			width: 100%;
+			bottom: 40px;
+			left: 350px;
+			z-index: 1;
+			cursor: pointer;
+			& .dot {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: #fff;
+				border: 2px solid @color-blue;
+				cursor: pointer;
+				border-radius: 16px;
+				margin: 0 20px;
+			}
+			& .active {
+				background: @color-blue;
+			}
+		}
+}
+
+@media (max-width: 768px) {
+  .slider {
+   display: none;
+  }
+}
+
+/*.slider__next {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background: @color-blue;
+	right: 10px;
+	top: 250px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.slider__prev {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background: @color-blue;
+	left: 10px;
+	top: 250px;
+	z-index: 1;
+	cursor: pointer;
+}*/
+

@@ -1,0 +1,66 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.about {
+	.container();
+	width: auto;
+	height: auto;
+	background: url("/img/bg-2.png") no-repeat;
+	background-size: cover;
+	color: @color-white;
+	display: flex;
+}
+
+.about__wrapper {
+	flex-grow: 1;
+	flex-basis: 40%;
+}
+
+.about__img {
+	background: url("/img/child.png") no-repeat;
+	width: 626px;
+	height: 458px;
+	flex-grow: 1;
+}
+
+.about__text {
+	padding-top: 55px;
+	padding-bottom: 40px;
+	h3 {
+		font-family: "dosis-medium-webfont", Helvetica, Arial, sans-serif;
+		margin: 0;
+		font-size: 30px;
+		line-height: 55px;
+	};
+	span {
+		font-family: "dosis-bold-webfont", Helvetica, Arial, sans-serif;
+		font-size: 35px;
+		text-transform: uppercase;
+	};
+	p {
+		font-family: "roboto-regular-webfont", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	.about__img {
+		display: none;
+	};
+	.about__text {
+		padding-top: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.about__wrapper {
+		width: 60%;
+	}
+  	.about__img {
+		width: 40%;
+	};
+	.about__text {
+		padding-top: 0px;
+	}
+}

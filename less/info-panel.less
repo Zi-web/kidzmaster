@@ -1,0 +1,93 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.info-panel {
+	font-family: "roboto-regular-webfont", Helvetica, Arial, sans-serif;
+	max-width: 1900px;
+	flex-grow: 1;
+	margin-right: 20px;
+
+}
+.info-panel__items {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	-webkit-display: box;
+}
+
+.info-panel__item {
+	list-style: none;
+	a {
+		text-decoration: none;
+		color: @color-white;
+		display: inline-block;
+		position: relative;
+	}
+}
+
+.info-panel__item:not(:last-child) {
+	padding-right: 50px;
+}
+
+.info-panel__item:nth-child(3) {
+	margin-left: auto;
+}
+
+.info-panel__item a:after {
+	background-color: @color-white;
+	display: block;
+	content: "";
+	height: 2px;
+	width: 0%;
+	position: absolute;
+	left: 50%;
+	transition: width .3s ease-in-out;
+	transform: translateX(-50%);
+}
+
+.info-panel__item a:hover:after,
+.info-panel__item a:active:after {
+	width: 100%;
+}
+
+.info-panel__item:nth-child(1) a {
+	background: url("/img/phone.png") no-repeat left center;
+	padding-left: 20px;
+}
+
+.info-panel__item:nth-child(2) a {
+	background: url("/img/letter.png") no-repeat left center;
+	padding-left: 20px;
+}
+
+.info-panel__item:nth-child(3) a {
+	background: url("/img/search.png") no-repeat left center;
+	padding-left: 50px;
+}
+
+.info-panel__item--none {
+	font-size: 0;
+}
+
+.info-panel__item:nth-child(4) a {
+	background: url("/img/register.png") no-repeat left center;
+	padding-left: 20px;
+}
+
+.info-panel__item:nth-child(5) a {
+	background: url("/img/login.png") no-repeat left center;
+	padding-left: 20px;
+}
+
+@media (max-width: 480px) {
+	.info-panel__items {
+		flex-direction: column;
+	}
+	.info-panel__item {
+		margin-left: 10px;
+		padding-right: 20px;
+	};
+	.info-panel__item:nth-child(3) {
+		margin-left: 10px;
+	}
+}

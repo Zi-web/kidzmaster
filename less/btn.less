@@ -1,0 +1,36 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.btn {
+	font-family: "roboto-medium-webfont", Helvetica, Arial, sans-serif;
+	width: 180px;
+	height: 50px;
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: @color-white;
+	color: @color-blue;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align:center;
+	border-radius: 10px;
+	height: 50px; /*выравнвание по вертикали*/
+  	line-height: 50px;	
+  	z-index: 1;
+  	transition: all 0.5s ease-in-out;
+  	&--color {
+  		background-color: @color-blue;
+		color: @color-white;
+  	}
+  	&--modal {
+  		background-color: @color-white;
+		color: @color-blue;
+		box-shadow: 0;
+		width: 140px;
+		height: 40px;
+		line-height: 40px;	
+  	}
+}
+
+.btn:hover {
+	transform: scale(1.1);
+}

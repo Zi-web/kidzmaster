@@ -1,0 +1,222 @@
+@import "variables.less";
+@import "mixins.less";
+@import "normalize.less";
+.review {
+	background: url("/img/bg-4.png") no-repeat;
+	background-size: cover;
+	width: auto;
+	z-index: 1;
+}
+
+.slider2 {
+	overflow: hidden; 
+	position: relative;
+	width: 945px;
+	margin: auto;
+	z-index: 1;
+		&__slides {
+			display: flex;
+			position: relative;
+			transition: 1s;
+			width: 920px;	
+		}
+
+		&__slide {
+			margin: 70px auto 0;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__slide-mask {
+			display: flex;
+			-webkit-mask: url("/img/review-slider-mask.png") no-repeat;
+			background-color: @color-white;
+			width: 412px;
+			height: 362px;
+			margin: auto;
+		}
+
+		&__img {
+				border-radius: 50%; 
+   				margin: auto;
+   				width: 230px;
+				height: 235px;
+   			}
+
+   		&__img:first-child {
+				background: url("/img/review-photo.jpg") no-repeat 0 -30px;
+			}
+
+   		&__slide figcaption {
+   					margin-top: 50px;
+   					margin-bottom: 100px;
+   					z-index: 1;
+   					width: auto;
+   					text-align: center;
+   					color: @color-white;
+   					font-family: "roboto-regular-webfont", Helvetica, Arial, sans-serif;
+   					font-size: 18px;
+   					line-height: 28px;
+   					span {
+   						display: inline-block;
+   						font-size: 36px;
+   						margin-bottom: 40px;
+   					}
+   				}
+   		&__next, &__prev {
+   			display: none;
+   		}
+
+		&__navigation {
+			position: absolute;
+			width: 100%;
+			bottom: 50px;
+			left: 40%;
+			cursor: pointer;
+			z-index: 1;
+
+			& .dot {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: @color-blue;
+				border: 2px solid @color-white;
+				cursor: pointer;
+				border-radius: 16px;
+				margin: 0 20px;
+				z-index: 1000;
+			}
+			& .active {
+				background: @color-white;
+			}
+		}
+}
+
+
+@media (max-width: 480px) {
+	.slider2 {
+		width: auto;
+			&__slides {
+				left: 15%;
+				width: auto;
+			};
+			&__slide-mask, &__img {
+				display: none;
+			};
+			&__slide figcaption {
+				margin-top: 20px;
+  				margin-bottom: 30px;
+  				width: 70%;
+				justify-content: center;  	
+			};
+			&__navigation {
+				display: none;
+			};
+			&__next {
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 50px;
+				background: rgba(0, 0, 0, 0.1);
+				right: 0px;
+				top: 0px;
+				z-index: 1;
+				cursor: pointer;
+				&:hover {
+					background: rgba(0, 0, 0, 0.7);
+				}
+			};
+			&__prev {
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 50px;
+				background: rgba(0, 0, 0, 0.1);
+				left: 0px;
+				top: 0px;
+				z-index: 1;
+				cursor: pointer;
+				&:hover {
+					background: rgba(0, 0, 0, 0.7);
+				}
+			};
+			&__prev span, &__next span {
+				cursor: pointer;
+  				position: absolute;
+  				top: 50%;
+  				width: auto;
+  				margin-top: -22px;
+  				padding: 16px;
+  				color: white;
+  				font-weight: bold;
+  				font-size: 26px;
+			}
+	}
+}
+
+@media (max-width: 768px) {
+  	.slider2 {
+		width: auto;
+			&__slides {
+				width: auto;
+			};
+			&__slide-mask {
+				justify-content: center;
+			};
+			&__slide figcaption {
+  				margin: 20px auto 40px auto;
+  				width: 80%;
+			};
+			&__navigation {
+				bottom: 10px;
+			};
+			&__next {
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 50px;
+				background: rgba(0, 0, 0, 0.1);
+				right: 0px;
+				top: 0px;
+				z-index: 1;
+				cursor: pointer;
+				&:hover {
+					background: rgba(0, 0, 0, 0.7);
+				}
+			};
+			&__prev {
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 50px;
+				background: rgba(0, 0, 0, 0.1);
+				left: 0px;
+				top: 0px;
+				z-index: 1;
+				cursor: pointer;
+				&:hover {
+					background: rgba(0, 0, 0, 0.7);
+				}
+			};
+			&__prev span, &__next span {
+				cursor: pointer;
+  				position: absolute;
+  				top: 50%;
+  				width: auto;
+  				margin-top: -22px;
+  				padding: 16px;
+  				color: white;
+  				font-weight: bold;
+  				font-size: 26px;
+			}
+	}
+}
+
+@media (max-width: 1024px) {
+	.slider2 {
+		width: auto;
+		&__slides {
+			width: auto;
+		}
+	}
+}
