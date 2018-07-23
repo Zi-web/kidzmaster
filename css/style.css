@@ -1346,7 +1346,7 @@ template {
   width: 300px;
   margin: 0 auto;
   padding: 20px;
-  background: url("/img/bg-3.png") no-repeat;
+  background: url("../img/bg-3.png") no-repeat;
   /*background-color: @color-blue;*/
   border-radius: 10px;
   box-shadow: 0 0 20px #cccccc;
