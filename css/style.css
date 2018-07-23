@@ -890,7 +890,7 @@ template {
   top: 140px;
 }
 .page-footer__img-rainbow {
-  background: url("/img/rainbow.png") no-repeat;
+  background: url("../img/rainbow.png") no-repeat;
   width: 442px;
   height: 319px;
   position: absolute;
@@ -975,7 +975,7 @@ template {
   justify-content: space-between;
 }
 .page-footer__bottom-img {
-  background: url("/img/bg-footer.png") no-repeat;
+  background: url("../img/bg-footer.png") no-repeat;
   background-size: cover;
   width: auto;
   height: 330px;
