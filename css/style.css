@@ -1529,8 +1529,8 @@ template {
     width: auto;
   }
   .slider2__slides {
-    left: 15%;
     width: auto;
+    text-align: center;
   }
   .slider2__slide-mask,
   .slider2__img {
